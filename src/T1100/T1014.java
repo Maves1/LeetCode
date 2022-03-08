@@ -2,36 +2,13 @@ package T1100;
 
 public class T1014 {
 
+    // TODO: Finish
+
     public static int maxScoreSightseeingPair(int[] values) {
         int n = values.length;
+        int maxScore = 0;
 
-        int p1 = 0;
-        int p2 = 1;
 
-        int maxScore = values[p1] + values[p2] - p2 + p1;
-
-        if (n >= 3) {
-
-            for (int i = 2; i < n; i++) {
-                int firstScore = values[p1] + values[i] - i + p1;
-                int secondScore = values[p2] + values[i] - i + p2;
-
-                if (firstScore > secondScore) {
-                    if (firstScore > maxScore) {
-                        maxScore = firstScore;
-                        p2 = i;
-                    }
-                } else {
-                    if (secondScore >= maxScore) {
-                        maxScore = secondScore;
-                        p1 = p2;
-                        p2 = i;
-                    }
-                }
-            }
-
-            return maxScore;
-        }
 
         return maxScore;
     }
